@@ -1,7 +1,12 @@
+import Navbar from "@/components/Navbar/Navbar";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  weight: ["800", "300", "700", "600", "500", "900"],
+  style: "normal",
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Niger State Head of Service",
@@ -11,7 +16,11 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={poppins.className}>
+        <Navbar />
+
+        <div className='bg-red-100'>{children}</div>
+      </body>
     </html>
   );
 }
