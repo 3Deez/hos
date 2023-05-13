@@ -59,14 +59,14 @@ const Navbar: FC = () => {
         >
           <Image src='/images/logo.png' alt='logo' width={30} height={80} />
         </button>
-        <div className='hidden w-5/12 items-center justify-center gap-x-7  md:flex'>
+        <div className='hidden w-5/12 items-center justify-center gap-x-7 md:flex'>
           <NavbarLink href='/' label='Home' />
           <NavbarLink href='/about' label='About' />
           <NavbarLink href='/media' label='Media' />
           <NavbarLink href='/mda' label='MDA' />
           <NavbarLink href='/contact' label='Contact' />
         </div>
-        <div className='hidden w-3/12 text-right  md:block'>
+        <div className='hidden w-3/12 text-right md:block'>
           <NavbarLink href='/contact' label='Contact' />
         </div>
         <>
