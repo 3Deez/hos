@@ -64,7 +64,6 @@ const Navbar: FC = () => {
           <NavbarLink href='/about' label='About' />
           <NavbarLink href='/media' label='Media' />
           <NavbarLink href='/mda' label='MDA' />
-          <NavbarLink href='/contact' label='Contact' />
         </div>
         <div className='hidden w-3/12 text-right md:block'>
           <NavbarLink href='/contact' label='Contact' />

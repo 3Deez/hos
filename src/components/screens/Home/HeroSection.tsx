@@ -1,25 +1,12 @@
 'use client'
 import Image from 'next/image'
-import { document } from 'postcss'
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 
 const StateLogo = '/images/state-logo.png'
 
 const HeroSection = () => {
   const stateLogoRef = useRef() as React.LegacyRef<HTMLDivElement>
 
-  useEffect(() => {
-    function fadeLogo(e: Event) {
-      if (window.scrollY < 400) {
-        const stateLogo = window.document.getElementById('stateLogo')
-
-        // stateLogo.style.opacity = 0.6;
-      }
-    }
-    window.addEventListener('scroll', fadeLogo)
-
-    return () => window.removeEventListener('scroll', fadeLogo)
-  })
   return (
     <div
       className='bg-linear_gradient'
