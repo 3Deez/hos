@@ -1,12 +1,25 @@
 'use client'
 import Image from 'next/image'
-import React, { useRef } from 'react'
+import { document } from 'postcss'
+import React, { useEffect, useRef } from 'react'
 
 const StateLogo = '/images/state-logo.png'
 
-function HeroSection() {
+const HeroSection = () => {
   const stateLogoRef = useRef() as React.LegacyRef<HTMLDivElement>
 
+  useEffect(() => {
+    function fadeLogo(e: Event) {
+      if (window.scrollY < 400) {
+        const stateLogo = window.document.getElementById('stateLogo')
+
+        // stateLogo.style.opacity = 0.6;
+      }
+    }
+    window.addEventListener('scroll', fadeLogo)
+
+    return () => window.removeEventListener('scroll', fadeLogo)
+  })
   return (
     <div
       className='bg-linear_gradient'
@@ -39,7 +52,19 @@ function HeroSection() {
         </div>
       </div>
 
-      <div className='h-[200px]'></div>
+      <div className='mx-auto flex h-[250px] w-11/12 items-center justify-between'>
+        <div className='flex h-full w-6/12 items-center text-xl text-white'>
+          <div className='w-1/2 border-r border-white pr-10'>
+            <h6>Lorem ipsum stuff more more doler ipsum lorem</h6>
+          </div>
+          <div className='w-1/2 pl-16'>
+            <h6>Lorem ipsum stuff more more doler ipsum lorem</h6>
+          </div>
+        </div>
+        <div className='flex h-full w-5/12 items-center justify-end text-right'>
+          <p className='text-right text-2xl font-bold text-yellow'>JANUARY 02, 2023</p>
+        </div>
+      </div>
     </div>
   )
 }
