@@ -10,8 +10,8 @@ const icons = {
 }
 
 const MAndVCard: FC<MAndVCardProps> = ({ iconName, title, writeUp1, writeUp2 }) => (
-  <div className='my-12 flex overflow-hidden rounded-xl border'>
-    <div className='flex w-96 flex-col items-center justify-center bg-secondary px-8 text-xl font-bold text-yellow'>
+  <div className='my-12 flex flex-col overflow-hidden rounded-xl border sm:flex-row'>
+    <div className='flex w-full flex-col items-center justify-center bg-secondary py-12 text-xl font-bold text-yellow sm:w-96 sm:px-8'>
       <div>{title.toUpperCase()}</div>
       <div>{icons[iconName]}</div>
     </div>
