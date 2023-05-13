@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 function Page() {
-  return <div className='h-screen bg-pink-600'>Media page</div>;
+  return <div className='h-screen bg-pink-600'>Media page</div>
 }
 
-export default Page;
+export default Page

@@ -1,10 +1,9 @@
-import HeroSection from "@/components/screens/Home/HeroSection";
-import Image from "next/image";
+import HeroSection from '@/components/screens/Home/HeroSection'
 
 export default function Home() {
   return (
     <>
       <HeroSection />
     </>
-  );
+  )
 }

@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* 
 @media (prefers-color-scheme: dark) {
   :root {
