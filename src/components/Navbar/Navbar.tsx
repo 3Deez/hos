@@ -3,26 +3,29 @@ import { useOnClickOutside } from '@/hooks/useOnClickOutSide'
 import cx from 'classnames'
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { FC, useCallback, useEffect, useState } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
+import { Dispatch, FC, SetStateAction, useCallback, useEffect, useState } from 'react'
 import { ImCross, ImMenu } from 'react-icons/im'
 
-const NavbarLink: FC<{ label: string; href: string }> = ({ href, label }) => {
+const NavbarLink: FC<{ label: string; href: string; setOpen?: Dispatch<SetStateAction<boolean>> }> = ({ href, label, setOpen }) => {
   const pathname = usePathname()
   const [activeUrl, setActiveUrl] = useState(`/${pathname.split('/')[1]}`)
 
   useEffect(() => setActiveUrl(`/${pathname.split('/')[1]}`), [pathname])
 
   return (
-    <Link href={href} className={cx(activeUrl === href ? 'text-yellow' : 'text-white')}>
-      {label}
-    </Link>
+    <button onClick={() => setOpen?.(false)}>
+      <Link href={href} className={cx(activeUrl === href ? 'text-yellow' : 'text-white hover:text-yellow')}>
+        {label}
+      </Link>
+    </button>
   )
 }
 
 const Navbar: FC = () => {
   const [open, setOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const router = useRouter()
   const { ref } = useOnClickOutside<HTMLDivElement>(() => setOpen(false))
 
   const checkScroll = useCallback(() => {
@@ -47,14 +50,21 @@ const Navbar: FC = () => {
           'fixed top-0 z-50 flex w-full items-center justify-between bg-primary px-8 py-3 transition-all md:w-10/12 md:rounded-md',
         )}
       >
-        <Link href='/' className='mr-8 inline rounded-md bg-white p-1'>
+        <button
+          className='mr-8 inline rounded-md bg-white p-1'
+          onClick={() => {
+            setOpen(false)
+            router.push('/')
+          }}
+        >
           <Image src='/images/logo.png' alt='logo' width={30} height={80} />
-        </Link>
+        </button>
         <div className='hidden w-5/12 items-center justify-center gap-x-7  md:flex'>
           <NavbarLink href='/' label='Home' />
           <NavbarLink href='/about' label='About' />
           <NavbarLink href='/media' label='Media' />
           <NavbarLink href='/mda' label='MDA' />
+          <NavbarLink href='/contact' label='Contact' />
         </div>
         <div className='hidden w-3/12 text-right  md:block'>
           <NavbarLink href='/contact' label='Contact' />
@@ -71,11 +81,11 @@ const Navbar: FC = () => {
               <ImCross />
             </button>
             <div className='flex flex-col gap-y-6 py-8'>
-              <NavbarLink href='/' label='Home' />
-              <NavbarLink href='/about' label='About' />
-              <NavbarLink href='/media' label='Media' />
-              <NavbarLink href='/mda' label='MDA' />
-              <NavbarLink href='/contact' label='Contact' />
+              <NavbarLink href='/' label='Home' setOpen={setOpen} />
+              <NavbarLink href='/about' label='About' setOpen={setOpen} />
+              <NavbarLink href='/media' label='Media' setOpen={setOpen} />
+              <NavbarLink href='/mda' label='MDA' setOpen={setOpen} />
+              <NavbarLink href='/contact' label='Contact' setOpen={setOpen} />
             </div>
           </div>
           <button className='block text-white md:hidden' onClick={() => setOpen(true)}>
