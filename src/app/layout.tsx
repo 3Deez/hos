@@ -9,8 +9,11 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  title: 'Niger State Head of Service',
+  title: 'NGS-HOS | Office of the Head of Service',
   description: 'Created by Lawal Adamu & Hassan Yakubu',
+  icons: {
+    icon: '/icon.png',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
