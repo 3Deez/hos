@@ -1,6 +1,6 @@
 import Navbar from '@/components/Navbar/Navbar'
 import './globals.css'
-import { Inter, Poppins } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700', '800', '900'],

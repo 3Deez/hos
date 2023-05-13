@@ -24,6 +24,7 @@ module.exports = {
         'plugin:prettier/recommended', //should be at the last
     ],
     rules: {
+        'import/no-unresolved': 'off',
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': ['error'],
         '@typescript-eslint/no-var-requires': 'off',
