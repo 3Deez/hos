@@ -1,6 +1,4 @@
 import AboutLayout from '@/components/screens/About/AboutLayout'
-import { Sidebar } from '@/components/Sidebar/Sidebar'
-import { ABOUT_LINKS } from '@/lib/data'
 import { NextPage } from 'next'
 import Image from 'next/image'
 
@@ -25,9 +23,9 @@ const Page: NextPage = () => {
         </div>
         <p className='mt-12 text-justify indent-5 text-sm leading-8 md:text-base md:leading-10'>
           Hajiya Salamatu Tatu Abubakar (mni) was born on 20th March, 1964 at Agaie LGA. She attended LEA Unguwar Sarki Musilimi Kaduna from
-          1971 to 1976. Thereafter, she proceeded to GGSS Bida for her GCE from 1976 to 1981. She obtained her first (Bachelor's) and second
-          (Master's) degree in Public Administration from Ahmadu Bello University, Zaria in 1986 and 2013 respectively. She also has to her
-          educational credit a certificate from NIPSS, Kuru.
+          1971 to 1976. Thereafter, she proceeded to GGSS Bida for her GCE from 1976 to 1981. She obtained her first (Bachelor&apos;s) and
+          second (Master&apos;s) degree in Public Administration from Ahmadu Bello University, Zaria in 1986 and 2013 respectively. She also
+          has to her educational credit a certificate from NIPSS, Kuru.
         </p>
       </div>
     </AboutLayout>
