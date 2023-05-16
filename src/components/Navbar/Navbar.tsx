@@ -50,15 +50,18 @@ const Navbar: FC = () => {
           'fixed top-0 z-50 flex w-full items-center justify-between bg-primary px-8 py-3 transition-all md:w-10/12 md:rounded-md',
         )}
       >
-        <button
-          className='mr-8 inline rounded-md bg-white p-1'
-          onClick={() => {
-            setOpen(false)
-            router.push('/')
-          }}
-        >
-          <Image src='/images/logo.png' alt='logo' width={30} height={80} />
-        </button>
+        <div className='w-3/12 '>
+          <button
+            className='mr-8 inline rounded-md bg-white p-1'
+            onClick={() => {
+              setOpen(false)
+              router.push('/')
+            }}
+          >
+            <Image src='/images/logo.png' alt='logo' width={30} height={80} />
+          </button>
+        </div>
+
         <div className='hidden w-5/12 items-center justify-center gap-x-7 md:flex'>
           <NavbarLink href='/' label='Home' />
           <NavbarLink href='/about' label='About' />

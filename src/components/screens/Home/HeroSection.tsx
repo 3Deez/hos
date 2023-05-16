@@ -1,12 +1,23 @@
 'use client'
+import { StateLogo } from '@/lib/data'
 import Image from 'next/image'
 import React, { useRef } from 'react'
-
-const StateLogo = '/images/state-logo.png'
 
 const HeroSection = () => {
   const stateLogoRef = useRef() as React.LegacyRef<HTMLDivElement>
 
+  // useEffect(() => {
+  //   function fadeLogo(e: Event) {
+  //     if (window.scrollY < 400) {
+  //       const stateLogo = window.document.getElementById('stateLogo')
+
+  //       // stateLogo.style.opacity = 0.6;
+  //     }
+  //   }
+  //   window.addEventListener('scroll', fadeLogo)
+
+  //   return () => window.removeEventListener('scroll', fadeLogo)
+  // })
   return (
     <div
       className='bg-linear_gradient'
@@ -17,10 +28,10 @@ const HeroSection = () => {
       }
     >
       <div
-        className='flex min-h-[110vh] w-full items-start justify-center text-center text-white '
+        className='flex min-h-[110vh] w-screen items-start justify-center text-center text-white '
         style={{
           background: "linear-gradient(180deg, rgba(0, 86, 91, 0.17) 40%, #1E98C9 100%), url('/images/home-bg.png')",
-          backgroundRepeat: 'no-repeat',
+          backgroundRepeat: 'repeat',
         }}
       >
         <div className='mt-[14%] flex h-[500px] w-[80%] flex-col items-center justify-center gap-y-8 pt-10'>

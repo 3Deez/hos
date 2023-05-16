@@ -327,3 +327,5 @@ export const PAST_HOS = [
     period: '2019 - Present',
   },
 ]
+
+export const StateLogo = '/images/state-logo.png'

@@ -3,13 +3,13 @@ import ArrowRight from '../../../../public/svgs/ArrowRight'
 
 const SecondSection = () => {
   return (
-    <main className='relative flex h-[600px]'>
+    <main className='relative flex h-[600px] justify-between'>
       <section
         className='absolute bottom-0 h-[650px] w-7/12 bg-home-bg object-cover  px-8 pb-6 pt-14'
         style={{
           background: "linear-gradient(180deg, rgba(0, 86, 91, 0.17) 5%, #0D5069 100%), url('/images/home-bg.png')",
           backgroundRepeat: 'no-repeat',
-          // bsckgroundPosition: 'center',
+          backgroundPosition: 'center',
           backgroundColor: '#0D5069',
         }}
       >
@@ -20,7 +20,7 @@ const SecondSection = () => {
           </h4>
 
           <div className='mt-16 flex flex-col gap-y-8'>
-            <h1 className='text-5xl font-bold text-yellow'>
+            <h1 className='text-4xl font-bold text-yellow'>
               Transforming The <br />
               Workforce in Niger state
             </h1>
@@ -33,15 +33,14 @@ const SecondSection = () => {
             <Link href='/about'>
               <button className='flex w-max flex-row items-center justify-center gap-x-4 rounded-3xl bg-yellow px-5 py-3 text-black'>
                 <span>Read More</span>
-                <ArrowRight />
+                <ArrowRight color='black' />
               </button>
             </Link>
           </div>
         </div>
       </section>
-
-      <section className='flex w-5/12 items-center justify-between bg-red-950'>
-        <div className='h-[460px] w-[346px] bg-[#D9D9D9]'></div>
+      <section className='absolute right-10 flex h-full w-5/12 items-end justify-between gap-x-5'>
+        <div className='-ml-32 h-[460px] w-[346px] bg-[#D9D9D9]'></div>
         <div className='h-[460px] w-[346px] bg-[#D9D9D9]'></div>
       </section>
     </main>
