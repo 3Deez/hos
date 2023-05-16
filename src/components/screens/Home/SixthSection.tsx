@@ -1,4 +1,6 @@
+import { PAST_HOS } from '@/lib/data'
 import ArrowRight from '../../../../public/svgs/ArrowRight'
+import { PastHOSCard } from '@/app/about/past-hos/page'
 
 const SixthSection = () => {
   return (
@@ -20,9 +22,9 @@ const SixthSection = () => {
         </div>
 
         <div className='mt-20 flex items-center justify-evenly'>
-          <div className='h-[460px] w-[346px] bg-[#D9D9D9]'></div>
-          <div className='h-[460px] w-[346px] bg-[#D9D9D9]'></div>
-          <div className='h-[460px] w-[346px] bg-[#D9D9D9]'></div>
+          {PAST_HOS.slice(0, 3).map(item => (
+            <PastHOSCard className={'h-[460px] w-[346px] bg-[#D9D9D9]'} imageHieght={320} key={item.id} {...item} />
+          ))}
         </div>
       </div>
     </div>

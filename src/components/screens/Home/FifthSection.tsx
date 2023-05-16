@@ -44,7 +44,7 @@ export default FifthSection
 
 const ITSection = () => {
   return (
-    <div className='mb-4 mb-5 flex flex-col gap-y-4 border-b border-border pb-3 pr-6'>
+    <div className='mb-5 flex flex-col gap-y-4 border-b border-border pb-3 pr-6'>
       <h3 className='text-2xl font-bold'>Introducing IT in all workforce</h3>
       <p className='text-xl'>
         Lorem ipsum dolor sit amet consectetur. In semper lectus sed dolor. Amet fermentum senectus imperdiet ipsum etiam sit non malesuada.{' '}
