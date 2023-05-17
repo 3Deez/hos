@@ -3,6 +3,8 @@ import { StateLogo } from '@/lib/data'
 import Image from 'next/image'
 import React, { useRef } from 'react'
 
+import Typewriter from 'typewriter-effect'
+
 const HeroSection = () => {
   const stateLogoRef = useRef() as React.LegacyRef<HTMLDivElement>
 
@@ -34,7 +36,7 @@ const HeroSection = () => {
           backgroundRepeat: 'repeat',
         }}
       >
-        <div className='mt-[14%] flex h-[500px] w-[80%] flex-col items-center justify-center gap-y-8 pt-10'>
+        <div className='mt-[14%] flex min-h-[500px] w-[80%] flex-col items-center justify-center gap-y-8 pt-10'>
           {/* Logo Section */}
           <div id='stateLogo' ref={stateLogoRef} className='flex h-[190px] w-[190px] items-center  justify-center rounded-full bg-white'>
             <Image src={StateLogo} alt='Head of Service Logo' height={90} width={100} quality={100} />
@@ -45,7 +47,23 @@ const HeroSection = () => {
           <h3 className='text-[32px] font-bold'>OFFICE OF HEAD OF SERVICE, NIGER STATE</h3>
 
           <h1 className='text-[50px] font-extrabold uppercase'>
-            “opportunities for all in the <br /> atmosphere of peace”
+            {/* “opportunities for all in the atmosphere atmosphere peace” */}
+            <Typewriter
+              options={{
+                strings: ['“opportunities for all in the <br/> atmosphere of peace”'],
+                autoStart: true,
+                // devMode: true,
+                loop: true,
+              }}
+            />
+            <br />
+            {/* <Typewriter
+              options={{
+                strings: ['atmosphere', 'atmosphere', 'peace”'],
+                autoStart: true,
+                loop: true,
+              }}
+            /> */}
           </h1>
         </div>
       </div>

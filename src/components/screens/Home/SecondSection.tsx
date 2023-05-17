@@ -7,7 +7,7 @@ const SecondSection = () => {
       <section
         className='absolute bottom-0 h-[650px] w-7/12 bg-home-bg object-cover  px-8 pb-6 pt-14'
         style={{
-          background: "linear-gradient(180deg, rgba(0, 86, 91, 0.17) 5%, #0D5069 100%), url('/images/home-bg.png')",
+          background: "linear-gradient(180deg, rgba(0, 86, 91, 0.17) 0%, #0D5069 100%), url('/images/home-bg.png')",
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundColor: '#0D5069',

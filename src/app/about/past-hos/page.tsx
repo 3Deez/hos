@@ -17,7 +17,6 @@ const BioData: FC<BioDataProps> = ({ label, value }) => (
 export const PastHOSCard: FC<PastHOSCardProps> = ({ className, designation, dob, id, imageHieght, imgName, lga, name, period }) => (
   <Card key={id} className={cx(className, 'overflow-hidden border-dark-blue bg-dark-blue text-white')}>
     <Image
-      border-dark-blue
       src={`/images/${imgName}`}
       quality={100}
       style={{ height: imageHieght || 250, width: '100%' }}
