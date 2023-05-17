@@ -28,7 +28,6 @@ const Map: FC<{ containerStyle?: IcontainerStyle }> = ({
     height: '400px',
   },
 }) => {
-  console.log(containerStyle, 'hello world')
   return (
     <LoadScript googleMapsApiKey={process.env.GOOGLE_MAP_API_KEY as string}>
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13}>

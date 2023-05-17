@@ -19,6 +19,7 @@ module.exports = {
         linear_gradient: 'linear-gradient(180deg, rgba(0, 86, 91, 0.17) 24.25%, #1E98C9 78.05%)',
         'home-bg': "url('/images/home-bg.png')",
         'lolo-hajia': "url('/images/lolo-hajia.png')",
+        ellipse: "url('/images/ellipse.png')",
       },
     },
   },

@@ -7,7 +7,7 @@ import { usePathname, useRouter } from 'next/navigation'
 import { Dispatch, FC, SetStateAction, useCallback, useEffect, useState } from 'react'
 import { ImCross, ImMenu } from 'react-icons/im'
 
-const NavbarLink: FC<{ label: string; href: string; setOpen?: Dispatch<SetStateAction<boolean>> }> = ({ href, label, setOpen }) => {
+export const NavbarLink: FC<{ label: string; href: string; setOpen?: Dispatch<SetStateAction<boolean>> }> = ({ href, label, setOpen }) => {
   const pathname = usePathname()
   const [activeUrl, setActiveUrl] = useState(`/${pathname.split('/')[1]}`)
 

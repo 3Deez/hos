@@ -4,6 +4,7 @@ import HeroSection from '@/components/screens/Home/HeroSection'
 import SecondSection from '@/components/screens/Home/SecondSection'
 import SeventhSection from '@/components/screens/Home/SeventhSection'
 import SixthSection from '@/components/screens/Home/SixthSection'
+import SubscribeSection from '@/components/screens/Home/SubscribeSection'
 import ThirdSection from '@/components/screens/Home/ThirdSection'
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <FifthSection />
       <SixthSection />
       <SeventhSection />
+      <SubscribeSection />
     </>
   )
 }
