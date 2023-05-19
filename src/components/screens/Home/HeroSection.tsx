@@ -8,27 +8,8 @@ import Typewriter from 'typewriter-effect'
 const HeroSection = () => {
   const stateLogoRef = useRef() as React.LegacyRef<HTMLDivElement>
 
-  // useEffect(() => {
-  //   function fadeLogo(e: Event) {
-  //     if (window.scrollY < 400) {
-  //       const stateLogo = window.document.getElementById('stateLogo')
-
-  //       // stateLogo.style.opacity = 0.6;
-  //     }
-  //   }
-  //   window.addEventListener('scroll', fadeLogo)
-
-  //   return () => window.removeEventListener('scroll', fadeLogo)
-  // })
   return (
-    <div
-      className='bg-linear_gradient'
-      style={
-        {
-          // background: "linear-gradient(180deg, rgba(0, 86, 91, 0.17) 24.25%, #1E98C9 78.05%)",
-        }
-      }
-    >
+    <div className='bg-linear_gradient'>
       <div
         className='flex min-h-[110vh] w-screen items-start justify-center text-center text-white '
         style={{
@@ -36,7 +17,7 @@ const HeroSection = () => {
           backgroundRepeat: 'repeat',
         }}
       >
-        <div className='mt-[14%] flex min-h-[500px] w-[80%] flex-col items-center justify-center gap-y-8 pt-10'>
+        <div className='mt-64 flex min-h-[500px] w-[80%] flex-col items-center justify-center gap-y-8 pt-0'>
           {/* Logo Section */}
           <div id='stateLogo' ref={stateLogoRef} className='flex h-[190px] w-[190px] items-center  justify-center rounded-full bg-white'>
             <Image src={StateLogo} alt='Head of Service Logo' height={90} width={100} quality={100} />
@@ -44,26 +25,19 @@ const HeroSection = () => {
 
           {/* Office write up */}
 
-          <h3 className='text-[32px] font-bold'>OFFICE OF HEAD OF SERVICE, NIGER STATE</h3>
+          <h3 className='text-xs font-bold md:text-base lg:text-2xl'>OFFICE OF HEAD OF SERVICE, NIGER STATE</h3>
 
-          <h1 className='text-[50px] font-extrabold uppercase'>
+          <h1 className='h-10 text-sm font-extrabold uppercase md:h-8 md:text-xl lg:h-20 lg:text-3xl lg:leading-10'>
             {/* “opportunities for all in the atmosphere atmosphere peace” */}
             <Typewriter
               options={{
                 strings: ['“opportunities for all in the <br/> atmosphere of peace”'],
                 autoStart: true,
-                // devMode: true,
+                deleteSpeed: 50,
                 loop: true,
+                cursor: '|',
               }}
             />
-            <br />
-            {/* <Typewriter
-              options={{
-                strings: ['atmosphere', 'atmosphere', 'peace”'],
-                autoStart: true,
-                loop: true,
-              }}
-            /> */}
           </h1>
         </div>
       </div>
