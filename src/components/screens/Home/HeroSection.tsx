@@ -11,13 +11,13 @@ const HeroSection = () => {
   return (
     <div className='bg-linear_gradient'>
       <div
-        className='flex min-h-[110vh] w-screen items-start justify-center text-center text-white '
+        className='flex h-screen w-screen items-start justify-center text-center text-white md:min-h-[110vh] '
         style={{
           background: "linear-gradient(180deg, rgba(0, 86, 91, 0.17) 40%, #1E98C9 100%), url('/images/home-bg.png')",
           backgroundRepeat: 'repeat',
         }}
       >
-        <div className='mt-64 flex min-h-[500px] w-[80%] flex-col items-center justify-center gap-y-8 pt-0'>
+        <div className='mt-40 flex min-h-[500px] w-[80%] flex-col items-center justify-center gap-y-8 pt-0 md:mt-64'>
           {/* Logo Section */}
           <div id='stateLogo' ref={stateLogoRef} className='flex h-[190px] w-[190px] items-center  justify-center rounded-full bg-white'>
             <Image src={StateLogo} alt='Head of Service Logo' height={90} width={100} quality={100} />
@@ -25,9 +25,9 @@ const HeroSection = () => {
 
           {/* Office write up */}
 
-          <h3 className='text-xs font-bold md:text-base lg:text-2xl'>OFFICE OF HEAD OF SERVICE, NIGER STATE</h3>
+          <h3 className='text-sm font-bold md:text-base lg:text-2xl'>OFFICE OF HEAD OF SERVICE, NIGER STATE</h3>
 
-          <h1 className='h-10 text-sm font-extrabold uppercase md:h-8 md:text-xl lg:h-20 lg:text-3xl lg:leading-10'>
+          <h1 className='h-10 text-lg font-extrabold uppercase md:h-8 md:text-2xl lg:h-20 lg:text-3xl lg:leading-10'>
             {/* “opportunities for all in the atmosphere atmosphere peace” */}
             <Typewriter
               options={{
@@ -42,7 +42,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className='mx-auto flex h-[250px] w-11/12 items-center justify-between'>
+      <div className='mx-auto hidden w-11/12 flex-col-reverse items-center justify-between md:flex md:h-[250px] md:flex-row'>
         <div className='flex h-full w-6/12 items-center text-xl text-white'>
           <div className='w-1/2 border-r border-white pr-10'>
             <h6>Lorem ipsum stuff more more doler ipsum lorem</h6>

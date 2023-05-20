@@ -47,10 +47,10 @@ const Navbar: FC = () => {
       <div
         className={cx(
           isScrolled ? 'md:top-0 md:w-full md:rounded-none' : 'md:top-8',
-          'fixed top-0 z-50 flex w-full items-center justify-between bg-primary px-8 py-3 transition-all md:w-10/12 md:rounded-md',
+          'fixed top-0 z-50 mx-auto flex w-screen items-center justify-between bg-primary px-8 py-3 transition-all md:w-10/12 md:rounded-md',
         )}
       >
-        <div className='w-3/12 '>
+        <div className='flex w-3/12 items-center justify-start'>
           <button
             className='mr-8 inline rounded-md bg-white p-1'
             onClick={() => {
@@ -71,12 +71,13 @@ const Navbar: FC = () => {
         <div className='hidden w-3/12 text-right md:block'>
           <NavbarLink href='/contact' label='Contact' />
         </div>
+
         <>
           <div
             ref={ref}
             className={cx(
-              !open && 'translate-x-full',
-              'absolute right-0 top-0 block h-screen w-3/5 flex-col bg-primary px-8 pt-7 transition duration-500 ease-in-out sm:w-5/12 md:hidden',
+              !open && 'block translate-x-full',
+              'absolute right-0 top-0 hidden h-screen w-3/5 flex-col bg-primary px-8 pt-7 transition duration-500 ease-in-out sm:w-5/12 md:hidden',
             )}
           >
             <button className='flex w-full justify-end text-white md:hidden' onClick={() => setOpen(false)}>

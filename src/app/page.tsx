@@ -9,7 +9,7 @@ import ThirdSection from '@/components/screens/Home/ThirdSection'
 
 export default function Home() {
   return (
-    <>
+    <div className='overflow-x-hidden'>
       <HeroSection />
       <SecondSection />
       <ThirdSection />
@@ -18,6 +18,6 @@ export default function Home() {
       <SixthSection />
       <SeventhSection />
       <SubscribeSection />
-    </>
+    </div>
   )
 }
