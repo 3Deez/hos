@@ -9,7 +9,7 @@ const ContactUsForm: FC<{ className?: string; fullWidthButton?: boolean }> = ({ 
     <form className={cx(className, 'md:px-10')}>
       <div className='mb-5 flex w-full flex-wrap items-center justify-between gap-x-10 gap-y-10'>
         {/* Field to enter user name */}
-        <div className=' flex h-[80px] w-full  items-center justify-between overflow-hidden rounded-[16px] bg-dark-blue px-3'>
+        <div className=' flex h-[60px] w-full  items-center justify-between overflow-hidden rounded-[16px] bg-dark-blue px-3'>
           <input
             type='text'
             placeholder='Enter your Name'
@@ -19,7 +19,7 @@ const ContactUsForm: FC<{ className?: string; fullWidthButton?: boolean }> = ({ 
         </div>
 
         {/* Email field */}
-        <div className='flex h-[80px] w-full items-center justify-between overflow-hidden rounded-[16px] bg-dark-blue px-3'>
+        <div className='flex h-[60px] w-full items-center justify-between overflow-hidden rounded-[16px] bg-dark-blue px-3'>
           <input
             type='text'
             placeholder='Enter your Email'
@@ -36,7 +36,7 @@ const ContactUsForm: FC<{ className?: string; fullWidthButton?: boolean }> = ({ 
       <button
         className={cx(
           fullWidthButton && 'w-full',
-          'py-auto mt-8 rounded-[34px] bg-yellow px-8 py-3 text-xl font-medium text-white md:text-2xl md:font-bold',
+          'py-auto mt-8 rounded-[16px] bg-yellow px-8 py-3 text-xl font-medium text-white md:text-2xl md:font-bold',
         )}
       >
         Submit

@@ -65,7 +65,7 @@ const Navbar: FC = () => {
         <div className='hidden w-5/12 items-center justify-center gap-x-7 md:flex'>
           <NavbarLink href='/' label='Home' />
           <NavbarLink href='/about' label='About' />
-          <NavbarLink href='/media' label='Media' />
+          <NavbarLink href='#' label='Media' />
           <NavbarLink href='/mda' label='MDA' />
         </div>
         <div className='hidden w-3/12 text-right md:block'>
@@ -86,7 +86,7 @@ const Navbar: FC = () => {
             <div className='flex flex-col gap-y-6 py-8'>
               <NavbarLink href='/' label='Home' setOpen={setOpen} />
               <NavbarLink href='/about' label='About' setOpen={setOpen} />
-              <NavbarLink href='/media' label='Media' setOpen={setOpen} />
+              <NavbarLink href='#' label='Media' setOpen={setOpen} />
               <NavbarLink href='/mda' label='MDA' setOpen={setOpen} />
               <NavbarLink href='/contact' label='Contact' setOpen={setOpen} />
             </div>

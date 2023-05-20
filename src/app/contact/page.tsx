@@ -20,8 +20,9 @@ const Page: NextPage = () => {
         </div>
       </div>
       <div className='mx-auto w-10/12'>
-        <div className='mx-auto mt-28 flex justify-center md:w-[40rem]'>
-          <ContactUsForm className='bg-transparent text-black' fullWidthButton />
+        <div className='mx-auto mt-28 flex flex-col items-center text-black md:w-[40rem]'>
+          <h5 className='mb-8 text-xl font-extrabold md:text-3xl'>GET IN TOUCH</h5>
+          <ContactUsForm className='bg-transparent' fullWidthButton />
         </div>
         <div className='my-12 flex w-full items-center justify-center'>
           <Map />

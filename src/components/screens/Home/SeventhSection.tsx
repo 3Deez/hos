@@ -21,7 +21,7 @@ const SeventhSection = () => {
             <div className='h-[90%] w-11/12  pt-10 text-center text-white'>
               <header className='mb-16'>
                 <h5 className='text-base font-extrabold md:text-xl'>GET IN TOUCH</h5>
-                <h1 className='text-[34px] font-extrabold md:text-[52px]'>Contact Us</h1>
+                <h1 className='text-[34px] font-extrabold md:text-[44px]'>Contact Us</h1>
               </header>
 
               <ContactUsForm />
