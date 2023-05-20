@@ -1,4 +1,5 @@
 import Map from '@/components/Map/Map'
+import ContactUsForm from '@/components/screens/Home/ContactUsForm'
 import { NextPage } from 'next'
 import Image from 'next/image'
 
@@ -19,12 +20,11 @@ const Page: NextPage = () => {
         </div>
       </div>
       <div className='mx-auto w-10/12'>
+        <div className='mx-auto mt-28 flex justify-center md:w-[40rem]'>
+          <ContactUsForm className='bg-transparent text-black' fullWidthButton />
+        </div>
         <div className='my-12 flex w-full items-center justify-center'>
           <Map />
-        </div>
-        <div className='md:flex'>
-          <div>Address</div>
-          <div>Phone</div>
         </div>
       </div>
     </div>
