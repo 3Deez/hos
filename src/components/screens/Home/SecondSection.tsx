@@ -1,6 +1,6 @@
 'use client'
 import gsapClient from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC, useEffect } from 'react'
