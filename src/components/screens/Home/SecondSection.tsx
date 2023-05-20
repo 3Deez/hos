@@ -19,6 +19,10 @@ const AppScreenItem: FC<{ suffix: string }> = ({ suffix }) => (
   </div>
 )
 
+gsapClient.config({
+  force3D: true,
+})
+
 const SecondSection: FC = () => {
   gsapClient.registerPlugin(ScrollTrigger)
 
