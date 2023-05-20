@@ -49,8 +49,15 @@ const SeventhSection = () => {
                 </div>
 
                 <div className='bg-darker-blue mx-auto mt-10 flex h-[250px]  items-center justify-center'>
-                  <textarea className='h-full w-full rounded-xl bg-dark-blue p-3 focus:border-0 active:border-0' />
+                  <textarea
+                    placeholder='Enter your Message'
+                    className='h-full w-full rounded-xl bg-dark-blue p-3 focus:border-0 active:border-0'
+                  />
                 </div>
+
+                <button className='py-auto mt-8 h-full rounded-[34px] bg-yellow px-8 py-3 text-xl font-medium text-white md:text-2xl md:font-bold'>
+                  Submit
+                </button>
               </form>
             </div>
           </aside>

@@ -21,7 +21,7 @@ const SixthSection = () => {
           </button>
         </div>
 
-        <div className='mt-20 flex flex-col items-center justify-evenly gap-y-5'>
+        <div className='mt-20 flex flex-wrap items-center justify-evenly gap-y-5 '>
           {PAST_HOS.slice(0, 3).map(item => (
             <PastHOSCard className={'h-[460px] w-[346px] bg-[#D9D9D9]'} imageHieght={320} key={item.id} {...item} />
           ))}
