@@ -43,7 +43,7 @@ const Navbar: FC = () => {
   }, [checkScroll])
 
   return (
-    <div className='top-0 flex w-full items-center justify-center border border-none text-lg font-semibold'>
+    <div className='top-0 flex w-full items-center justify-center overflow-x-hidden border border-none text-lg font-semibold'>
       <div
         className={cx(
           isScrolled ? 'md:top-0 md:w-full md:rounded-none' : 'md:top-8',
@@ -76,8 +76,8 @@ const Navbar: FC = () => {
           <div
             ref={ref}
             className={cx(
-              !open && 'block translate-x-full',
-              'absolute right-0 top-0 hidden h-screen w-3/5 flex-col bg-primary px-8 pt-7 transition duration-500 ease-in-out sm:w-5/12 md:hidden',
+              !open && 'translate-x-full',
+              'absolute right-0 top-0 block h-screen w-3/5 flex-col bg-primary px-8 pt-7 transition duration-500 ease-in-out sm:w-5/12 md:hidden',
             )}
           >
             <button className='flex w-full justify-end text-white md:hidden' onClick={() => setOpen(false)}>
