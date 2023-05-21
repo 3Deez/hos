@@ -27,104 +27,51 @@ const SecondSection: FC = () => {
   gsapClient.registerPlugin(ScrollTrigger)
 
   useEffect(() => {
-    const ourStory = gsapClient
-      .timeline({
-        scrollTrigger: {
-          trigger: '#csr-wrapper',
-          start: 'top center',
-        },
-      })
-      .from('#csr-wrapper', { y: -200 })
-      .to('#csr-wrapper', { y: 0 })
-      .from('#csr-app', {
-        xPercent: 0,
-      })
-      .to('#csr-app', {
-        xPercent: 100,
-        duration: 1,
-      })
+    const t = gsapClient.timeline({
+      scrollTrigger: {
+        trigger: '#csr-wrapper',
+        start: 'top center',
+      },
+    })
 
-    gsapClient
-      .timeline({
-        scrollTrigger: {
-          trigger: '#csr-wrapper',
-          start: 'top center',
-        },
-      })
-      .from('#csr-app2', {
-        xPercent: -100,
-      })
-      .to('#csr-app2', {
-        delay: 1,
-        xPercent: 0,
-        duration: 1,
-      })
-      .to('#csr-app2', {
-        delay: 2,
-        xPercent: 100,
-        duration: 1,
-      })
+    t.from('#csr-wrapper', { y: -200 }).to('#csr-wrapper', { y: 0, duration: 1 })
 
-    gsapClient
-      .timeline({
-        scrollTrigger: {
-          trigger: '#csr-wrapper',
-          start: 'top center',
-        },
-      })
-      .from('#csr-app3', {
-        xPercent: -120,
-      })
-      .to('#csr-app3', {
-        delay: 4,
-        xPercent: 0,
-        duration: 1,
-      })
-      .to('#csr-app3', {
-        delay: 2,
-        xPercent: 100,
-        duration: 1,
-      })
+    t.from('#csr-app2', {
+      xPercent: -100,
+    }).to('#csr-app2', {
+      delay: 2,
+      xPercent: 0,
+      duration: 1,
+    })
 
-    gsapClient
-      .timeline({
-        scrollTrigger: {
-          trigger: '#csr-wrapper',
-          start: 'top center',
-        },
-      })
-      .from('#csr-app4', {
-        xPercent: -100,
-      })
-      .to('#csr-app4', {
-        delay: 7,
-        xPercent: 0,
-        duration: 1,
-      })
-      .to('#csr-app4', {
-        delay: 2,
-        xPercent: 100,
-        duration: 1,
-      })
+    t.from('#csr-app3', {
+      xPercent: -120,
+    }).to('#csr-app3', {
+      delay: 2,
+      xPercent: 0,
+      duration: 1,
+    })
 
-    gsapClient
-      .timeline({
-        scrollTrigger: {
-          trigger: '#csr-wrapper',
-          start: 'top center',
-        },
-      })
-      .from('#csr-app5', {
-        xPercent: -100,
-      })
-      .to('#csr-app5', {
-        delay: 10,
-        xPercent: 0,
-        duration: 1,
-      })
+    t.from('#csr-app4', {
+      xPercent: -100,
+    }).to('#csr-app4', {
+      delay: 2,
+      xPercent: 0,
+      duration: 1,
+    })
+
+    t.from('#csr-app5', {
+      xPercent: -100,
+    }).to('#csr-app5', {
+      delay: 2,
+      xPercent: 0,
+      duration: 1,
+    })
+
+    t.restart()
 
     return () => {
-      ourStory.kill()
+      t.kill()
     }
   }, [])
 
