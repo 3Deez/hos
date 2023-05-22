@@ -26,10 +26,12 @@ const FifthSection = () => {
 
           <div className='hidden h-[700px] border border-border md:block'></div>
 
-          <div className='mt-10 h-full md:mt-0 md:w-1/2'>
-            {[1, 2, 3].map((_, index) => {
-              return <ITSection key={index} />
-            })}
+          <div className='mt-10 flex h-full flex-col justify-center md:w-1/2'>
+            <div>
+              {[1, 2, 3].map(_ => {
+                return <ITSection key={_} />
+              })}
+            </div>
 
             <button className='mt-10 flex items-center gap-x-3 text-xl font-bold'>
               <span>Read More</span> <ArrowRight color='#1E98C9' />
@@ -45,13 +47,10 @@ export default FifthSection
 
 const ITSection = () => {
   return (
-    <div className='mb-5 flex flex-col gap-y-4 border-b border-border pb-3 pr-6'>
-      <h3 className='text-xl font-bold md:text-2xl'>Introducing IT in all workforce</h3>
-      <p className='text-base md:text-xl'>
+    <div className='mb-16 flex flex-col gap-y-4 border-b border-border pb-3 pr-6'>
+      <h3 className='text-xl font-medium md:text-2xl'>Introducing IT in all workforce</h3>
+      <p className='text-base text-slate-500 md:text-lg'>
         Lorem ipsum dolor sit amet consectetur. In semper lectus sed dolor. Amet fermentum senectus imperdiet ipsum etiam sit non malesuada.{' '}
-      </p>
-      <p className='text-base font-light text-[#6F6F6F] md:text-xl'>
-        <span className='border-t-4 border-primary'>BY MARY</span> NOEL BARJE
       </p>
     </div>
   )

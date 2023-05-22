@@ -35,10 +35,9 @@ const FourthSection = () => {
         <div className='flex h-full flex-col px-5 pt-5 md:w-6/12 md:pl-16'>
           <h1 className='text-2xl font-bold text-white md:text-[2.8rem]'>Head of Service Niger State</h1>
 
-          <p className='mt-8 text-base text-white md:mt-16 md:w-10/12 md:text-xl'>
-            We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. By
-            clicking “Accept”, you consent to the use of ALL the cookies. However you may visit Cookie Settings to provide a controlled
-            consent.
+          <p className='mt-8 text-base text-white md:mt-16 md:w-10/12 md:text-xl md:leading-10'>
+            Hajiya Salamatu Tatu Abubakar (mni) was born on 20th March, 1964 at Agaie LGA. She attended LEA Unguwar Sarki Musilimi Kaduna
+            from 1971 to 1976. Thereafter, she proceeded to GGSS Bida for her GCE from 1976 to 1981.
           </p>
 
           <button className='mt-10 w-max rounded-[30px] bg-yellow px-6 py-4 text-black'>

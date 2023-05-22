@@ -1,23 +1,48 @@
 'use client'
 import { StateLogo } from '@/lib/data'
+import { format } from 'date-fns'
 import Image from 'next/image'
-import React, { useRef } from 'react'
+import Link from 'next/link'
+import React, { useEffect, useRef, useState } from 'react'
 
 import Typewriter from 'typewriter-effect'
 
 const HeroSection = () => {
   const stateLogoRef = useRef() as React.LegacyRef<HTMLDivElement>
+  const [localTime, setLocalTime] = useState(format(new Date(), 'd MMM, yyyy h:mm a'))
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const seconds = new Date().getSeconds()
+
+      if (seconds === 0) {
+        setLocalTime(format(new Date(), 'do MMM, yyyy h:mm a'))
+      }
+    }, 1000)
+
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <div className='bg-linear_gradient'>
+      <div className='absolute -z-10 h-[85vh] w-full'>
+        <Image
+          src='/images/home-bg.png'
+          alt='Head of Service Logo'
+          style={{ width: '100%', height: '100%' }}
+          width={1280}
+          height={50}
+          quality={100}
+        />
+      </div>
       <div
-        className='flex h-screen w-screen items-start justify-center text-center text-white md:min-h-[110vh] '
-        style={{
-          background: "linear-gradient(180deg, rgba(0, 86, 91, 0.17) 40%, #1E98C9 100%), url('/images/home-bg.png')",
-          backgroundRepeat: 'repeat',
-        }}
+        className='flex h-[85vh] w-[100%] items-start justify-center text-center text-white'
+        // style={{
+        //   background: "linear-gradient(180deg, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0.7) 100%), url('/images/home-bg.png')",
+        //   // backgroundRepeat: 'repeat',
+        // }}
       >
-        <div className='mt-40 flex min-h-[500px] w-[80%] flex-col items-center justify-center gap-y-8 pt-0 md:mt-64'>
+        <div className='mt-20 flex min-h-[500px] w-[80%] flex-col items-center justify-center gap-y-8 pt-0 md:mt-32'>
           {/* Logo Section */}
           <div id='stateLogo' ref={stateLogoRef} className='flex h-[190px] w-[190px] items-center  justify-center rounded-full bg-white'>
             <Image src={StateLogo} alt='Head of Service Logo' height={90} width={100} quality={100} />
@@ -42,17 +67,17 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className='mx-auto hidden w-11/12 flex-col-reverse items-center justify-between md:flex md:h-[250px] md:flex-row'>
-        <div className='flex h-full w-6/12 items-center text-xl text-white'>
-          <div className='w-1/2 border-r border-white pr-10'>
-            <h6>Lorem ipsum stuff more more doler ipsum lorem</h6>
-          </div>
-          <div className='w-1/2 pl-16'>
-            <h6>Lorem ipsum stuff more more doler ipsum lorem</h6>
-          </div>
+      <div className='mx-auto h-full w-full flex-col-reverse items-center justify-between bg-primary px-[5%] py-8 md:flex md:h-[12rem] md:flex-row'>
+        <div className='flex h-full w-full items-center text-2xl font-bold text-white sm:w-6/12'>
+          <Link href='/about/mission-and-vision' className='w-1/2 border-r border-white pr-16 text-right hover:text-yellow'>
+            Vision
+          </Link>
+          <Link href='/about/mission-and-vision' className='w-1/2 pl-16 hover:text-yellow'>
+            Mission
+          </Link>
         </div>
-        <div className='flex h-full w-5/12 items-center justify-end text-right'>
-          <p className='text-right text-2xl font-bold text-yellow'>JANUARY 02, 2023</p>
+        <div className='mt-3 flex h-full w-full items-center justify-center text-right sm:w-5/12 sm:justify-end'>
+          <p className='text-sm font-bold text-yellow sm:text-right md:text-2xl'>{localTime}</p>
         </div>
       </div>
     </div>
