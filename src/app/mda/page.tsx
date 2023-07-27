@@ -11,7 +11,7 @@ const MDAMetric: FC<MDAMeticProps> = ({ label, total }) => (
   </div>
 )
 
-// open 15:11
+// open 15:13
 const Page: NextPage = () => {
   return (
     <div className='mx-auto mb-20 h-full w-10/12 pt-36'>
